@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<link href="coqdocjs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="coqdocjs.js"></script>
+</head>
+
+<body onload="document.getElementById('content').focus()">
+  <div id="header">
+    <span class="left">
+      <span class="modulename"> <script> document.write(document.title) </script> </span>
+    </span>
+
+    <span class="button" id="toggle-proofs"></span>
+
+    <span class="right">
+      <a href="../">Project Page</a>
+      <a href="./indexpage.html"> Index </a>
+      <a href="./toc.html"> Table of Contents </a>
+    </span>
+</div>
+    <div id="content" tabindex="-1" onblur="document.getElementById('content').focus()">
+    <div id="main">
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">Undecidability.FOL</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Undecidability.FOL.FSAT.html#"><span class="id" title="library">FSAT</span></a>.<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="var">Undecidability.FOL.Util</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Undecidability.FOL.Util.Syntax_facts.html#"><span class="id" title="library">Syntax_facts</span></a> <a class="idref" href="Undecidability.FOL.Util.FullTarski_facts.html#"><span class="id" title="library">FullTarski_facts</span></a> <a class="idref" href="Undecidability.FOL.Util.sig_bin.html#"><span class="id" title="library">sig_bin</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Undecidability.Synthetic.Definitions.html#"><span class="id" title="library">Undecidability.Synthetic.Definitions</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Vectors.Vector.html#"><span class="id" title="library">Vector</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.micromega.Lia.html#"><span class="id" title="library">Lia</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Set</span> <span class="id" title="var">Default</span> <span class="id" title="keyword">Goal</span> <span class="id" title="var">Selector</span> "!".<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="exclosure" class="idref" href="#exclosure"><span class="id" title="definition">exclosure</span></a> <a id="phi:1" class="idref" href="#phi:1"><span class="id" title="binder">phi</span></a> : <a class="idref" href="Undecidability.FOL.Util.Syntax.html#form"><span class="id" title="inductive">form</span></a> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">let</span> (<a id="N:2" class="idref" href="#N:2"><span class="id" title="binder">N</span></a>, <span class="id" title="var">_</span>) := <a class="idref" href="Undecidability.FOL.Util.Syntax_facts.html#find_bounded"><span class="id" title="lemma">find_bounded</span></a> <a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#phi:1"><span class="id" title="variable">phi</span></a> <span class="id" title="tactic">in</span> <a class="idref" href="Undecidability.FOL.Util.FullTarski_facts.html#exist_times"><span class="id" title="definition">exist_times</span></a> <a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#N:2"><span class="id" title="variable">N</span></a> <a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#phi:1"><span class="id" title="variable">phi</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a id="exclosure_closed" class="idref" href="#exclosure_closed"><span class="id" title="lemma">exclosure_closed</span></a> <a id="phi:3" class="idref" href="#phi:3"><span class="id" title="binder">phi</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Undecidability.FOL.Util.Syntax_facts.html#bounded"><span class="id" title="inductive">bounded</span></a> 0 (<a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#exclosure"><span class="id" title="definition">exclosure</span></a> <a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#phi:3"><span class="id" title="variable">phi</span></a>).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#exclosure"><span class="id" title="definition">exclosure</span></a>. <span class="id" title="tactic">destruct</span> <a class="idref" href="Undecidability.FOL.Util.Syntax_facts.html#find_bounded"><span class="id" title="lemma">find_bounded</span></a> <span class="id" title="keyword">as</span> [<span class="id" title="var">N</span> <span class="id" title="var">HN</span>]. <span class="id" title="var">now</span> <span class="id" title="tactic">apply</span> <a class="idref" href="Undecidability.FOL.Util.FullTarski_facts.html#exists_close_form"><span class="id" title="lemma">exists_close_form</span></a>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="form2cform" class="idref" href="#form2cform"><span class="id" title="definition">form2cform</span></a> <a id="phi:4" class="idref" href="#phi:4"><span class="id" title="binder">phi</span></a> : <a class="idref" href="Undecidability.FOL.FSAT.html#cform"><span class="id" title="definition">cform</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Specif.html#exist"><span class="id" title="constructor">exist</span></a> <span class="id" title="var">_</span> (<a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#exclosure"><span class="id" title="definition">exclosure</span></a> <a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#phi:4"><span class="id" title="variable">phi</span></a>) (<a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#exclosure_closed"><span class="id" title="lemma">exclosure_closed</span></a> <a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#phi:4"><span class="id" title="variable">phi</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">Theorem</span> <a id="reduction" class="idref" href="#reduction"><span class="id" title="lemma">reduction</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Undecidability.FOL.FSAT.html#FSATd"><span class="id" title="definition">FSATd</span></a> <a class="idref" href="Undecidability.Synthetic.Definitions.html#8d2edb2d53aefda0fb906bca2c603282"><span class="id" title="notation">⪯</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#FSATdc"><span class="id" title="definition">FSATdc</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">exists</span> <a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#form2cform"><span class="id" title="definition">form2cform</span></a>. <span class="id" title="tactic">intros</span> <span class="id" title="var">phi</span>; <span class="id" title="tactic">unfold</span> <a class="idref" href="Undecidability.FOL.FSAT.html#FSATdc"><span class="id" title="definition">FSATdc</span></a>; <span class="id" title="var">cbn</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">unfold</span> <a class="idref" href="Undecidability.FOL.Reductions.FSATd_to_FSATdc.html#exclosure"><span class="id" title="definition">exclosure</span></a>. <span class="id" title="tactic">destruct</span> <a class="idref" href="Undecidability.FOL.Util.Syntax_facts.html#find_bounded"><span class="id" title="lemma">find_bounded</span></a> <span class="id" title="keyword">as</span> [<span class="id" title="var">N</span> <span class="id" title="var">HN</span>].<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">split</span>; <span class="id" title="tactic">intros</span> (<span class="id" title="var">D</span> &amp; <span class="id" title="var">M</span> &amp; <span class="id" title="var">rho</span> &amp; <span class="id" title="var">H1</span> &amp; <span class="id" title="var">H2</span> &amp; <span class="id" title="var">H3</span> &amp; <span class="id" title="var">H4</span>); <span class="id" title="tactic">exists</span> <span class="id" title="var">D</span>, <span class="id" title="var">M</span>.<br/>
+&nbsp;&nbsp;- <span class="id" title="tactic">exists</span> <span class="id" title="var">rho</span>. <span class="id" title="tactic">repeat</span> <span class="id" title="tactic">split</span>; <span class="id" title="tactic">trivial</span>. <span class="id" title="tactic">eapply</span> <a class="idref" href="Undecidability.FOL.Util.FullTarski_facts.html#subst_exist_sat"><span class="id" title="lemma">subst_exist_sat</span></a>; <span class="id" title="tactic">eauto</span>.<br/>
+&nbsp;&nbsp;- <span class="id" title="tactic">apply</span> <a class="idref" href="Undecidability.FOL.Util.FullTarski_facts.html#subst_exist_sat2"><span class="id" title="lemma">subst_exist_sat2</span></a> <span class="id" title="tactic">in</span> <span class="id" title="var">H4</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">sigma</span> <span class="id" title="var">H</span>]. <span class="id" title="tactic">exists</span> <span class="id" title="var">sigma</span>. <span class="id" title="tactic">repeat</span> <span class="id" title="tactic">split</span>; <span class="id" title="tactic">trivial</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+</div>
+<div id="footer">
+  Generated by <a href="http://coq.inria.fr/">coqdoc</a> and improved with <a href="https://github.com/tebbi/coqdocjs">CoqdocJS</a>
+</div>
+</div>
+</body>
+
+</html>

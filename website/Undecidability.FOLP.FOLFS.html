@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<link href="coqdocjs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="coqdocjs.js"></script>
+</head>
+
+<body onload="document.getElementById('content').focus()">
+  <div id="header">
+    <span class="left">
+      <span class="modulename"> <script> document.write(document.title) </script> </span>
+    </span>
+
+    <span class="button" id="toggle-proofs"></span>
+
+    <span class="right">
+      <a href="../">Project Page</a>
+      <a href="./indexpage.html"> Index </a>
+      <a href="./toc.html"> Table of Contents </a>
+    </span>
+</div>
+    <div id="content" tabindex="-1" onblur="document.getElementById('content').focus()">
+    <div id="main">
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">Undecidability</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span> <a class="idref" href="Undecidability.FOLP.Util.FullTarski.html#"><span class="id" title="library">FOLP.Util.FullTarski</span></a>.<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="listable" class="idref" href="#listable"><span class="id" title="definition">listable</span></a> <a id="X:1" class="idref" href="#X:1"><span class="id" title="binder">X</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">exists</span></a> <a id="L:2" class="idref" href="#L:2"><span class="id" title="binder">L</span></a><a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">,</span></a> <span class="id" title="keyword">forall</span> <a id="x:3" class="idref" href="#x:3"><span class="id" title="binder">x</span></a> : <a class="idref" href="Undecidability.FOLP.FOLFS.html#X:1"><span class="id" title="variable">X</span></a>, <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Lists.List.html#In"><span class="id" title="definition">In</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#x:3"><span class="id" title="variable">x</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#L:2"><span class="id" title="variable">L</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a id="Finsat" class="idref" href="#Finsat"><span class="id" title="section">Finsat</span></a>.<br/>
+
+<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Variable</span> <a id="Finsat.Sigma" class="idref" href="#Finsat.Sigma"><span class="id" title="variable">Sigma</span></a> : <a class="idref" href="Undecidability.FOLP.Util.FullSyntax.html#Signature"><span class="id" title="class">Signature</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Variable</span> <a id="Finsat.eqp" class="idref" href="#Finsat.eqp"><span class="id" title="variable">eqp</span></a> : <a class="idref" href="Undecidability.FOLP.Util.FullSyntax.html#Preds"><span class="id" title="method">Preds</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Hypothesis</span> <a id="Finsat.Heqp" class="idref" href="#Finsat.Heqp"><span class="id" title="variable">Heqp</span></a> : 2 <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Undecidability.FOLP.Util.FullSyntax.html#pred_ar"><span class="id" title="method">pred_ar</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#Finsat.eqp"><span class="id" title="variable">eqp</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="i_eqp" class="idref" href="#i_eqp"><span class="id" title="definition">i_eqp</span></a> <a id="D:7" class="idref" href="#D:7"><span class="id" title="binder">D</span></a> (<a id="I:8" class="idref" href="#I:8"><span class="id" title="binder">I</span></a> : <a class="idref" href="Undecidability.FOLP.Util.FullTarski.html#interp"><span class="id" title="class">interp</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#D:7"><span class="id" title="variable">D</span></a>) <a id="x:9" class="idref" href="#x:9"><span class="id" title="binder">x</span></a> <a id="y:10" class="idref" href="#y:10"><span class="id" title="binder">y</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;@<a class="idref" href="Undecidability.FOLP.Util.FullTarski.html#i_P"><span class="id" title="method">i_P</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#Finsat.Sigma"><span class="id" title="variable">Sigma</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#D:7"><span class="id" title="variable">D</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#I:8"><span class="id" title="variable">I</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#Finsat.eqp"><span class="id" title="variable">eqp</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Vectors.Vector.html#cast"><span class="id" title="definition">cast</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Vectors.Vector.html#cons"><span class="id" title="constructor">Vector.cons</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#x:9"><span class="id" title="variable">x</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Vectors.Vector.html#cons"><span class="id" title="constructor">Vector.cons</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#y:10"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Vectors.Vector.html#nil"><span class="id" title="constructor">Vector.nil</span></a>)) <a class="idref" href="Undecidability.FOLP.FOLFS.html#Finsat.Heqp"><span class="id" title="variable">Heqp</span></a>).<br/>
+
+<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="finsat" class="idref" href="#finsat"><span class="id" title="definition">finsat</span></a> <a id="phi:11" class="idref" href="#phi:11"><span class="id" title="binder">phi</span></a> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">exists</span></a> <a id="D:12" class="idref" href="#D:12"><span class="id" title="binder">D</span></a> (<a id="I:13" class="idref" href="#I:13"><span class="id" title="binder">I</span></a> : <a class="idref" href="Undecidability.FOLP.Util.FullTarski.html#interp"><span class="id" title="class">interp</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#D:12"><span class="id" title="variable">D</span></a>) <a id="rho:14" class="idref" href="#rho:14"><span class="id" title="binder">rho</span></a><a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">,</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#listable"><span class="id" title="definition">listable</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#D:12"><span class="id" title="variable">D</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">/\</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">(</span></a><span class="id" title="keyword">forall</span> <a id="x:15" class="idref" href="#x:15"><span class="id" title="binder">x</span></a> <a id="y:16" class="idref" href="#y:16"><span class="id" title="binder">y</span></a>, <a class="idref" href="Undecidability.FOLP.FOLFS.html#i_eqp"><span class="id" title="definition">i_eqp</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#I:13"><span class="id" title="variable">I</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#x:15"><span class="id" title="variable">x</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#y:16"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#::type_scope:x_'&lt;-&gt;'_x"><span class="id" title="notation">&lt;-&gt;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#eq"><span class="id" title="inductive">eq</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#x:15"><span class="id" title="variable">x</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#y:16"><span class="id" title="variable">y</span></a><a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">/\</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#rho:14"><span class="id" title="variable">rho</span></a> <a class="idref" href="Undecidability.FOLP.Util.FullTarski.html#d50aa3cc3a68361fcdb685523acf6731"><span class="id" title="notation">⊨</span></a> <a class="idref" href="Undecidability.FOLP.FOLFS.html#phi:11"><span class="id" title="variable">phi</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="Undecidability.FOLP.FOLFS.html#Finsat"><span class="id" title="section">Finsat</span></a>.<br/>
+</div>
+</div>
+<div id="footer">
+  Generated by <a href="http://coq.inria.fr/">coqdoc</a> and improved with <a href="https://github.com/tebbi/coqdocjs">CoqdocJS</a>
+</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<link href="coqdocjs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="coqdocjs.js"></script>
+</head>
+
+<body onload="document.getElementById('content').focus()">
+  <div id="header">
+    <span class="left">
+      <span class="modulename"> <script> document.write(document.title) </script> </span>
+    </span>
+
+    <span class="button" id="toggle-proofs"></span>
+
+    <span class="right">
+      <a href="../">Project Page</a>
+      <a href="./indexpage.html"> Index </a>
+      <a href="./toc.html"> Table of Contents </a>
+    </span>
+</div>
+    <div id="content" tabindex="-1" onblur="document.getElementById('content').focus()">
+    <div id="main">
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="var">Undecidability.FOL.Util</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Undecidability.FOL.Util.Syntax_facts.html#"><span class="id" title="library">Syntax_facts</span></a> <a class="idref" href="Undecidability.FOL.Util.FullTarski.html#"><span class="id" title="library">FullTarski</span></a> <a class="idref" href="Undecidability.FOL.Util.sig_bin.html#"><span class="id" title="library">sig_bin</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Undecidability.Synthetic.DecidabilityFacts.html#"><span class="id" title="library">Undecidability.Synthetic.DecidabilityFacts</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Lists.List.html#"><span class="id" title="library">List</span></a>.<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="var">Existing</span> <span class="id" title="keyword">Instance</span> <span class="id" title="var">falsity_on</span>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="listable" class="idref" href="#listable"><span class="id" title="definition">listable</span></a> <a id="X:1" class="idref" href="#X:1"><span class="id" title="binder">X</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">exists</span></a> <a id="L:2" class="idref" href="#L:2"><span class="id" title="binder">L</span></a><a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">,</span></a> <span class="id" title="keyword">forall</span> <a id="x:3" class="idref" href="#x:3"><span class="id" title="binder">x</span></a> : <a class="idref" href="Undecidability.FOL.FSAT.html#X:1"><span class="id" title="variable">X</span></a>, <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Lists.List.html#In"><span class="id" title="definition">In</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#x:3"><span class="id" title="variable">x</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#L:2"><span class="id" title="variable">L</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="FSAT" class="idref" href="#FSAT"><span class="id" title="definition">FSAT</span></a> (<a id="phi:4" class="idref" href="#phi:4"><span class="id" title="binder">phi</span></a> : <a class="idref" href="Undecidability.FOL.Util.Syntax.html#form"><span class="id" title="inductive">form</span></a>) :=<br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">exists</span></a> <a id="D:5" class="idref" href="#D:5"><span class="id" title="binder">D</span></a> (<a id="I:6" class="idref" href="#I:6"><span class="id" title="binder">I</span></a> : <a class="idref" href="Undecidability.FOL.Util.FullTarski.html#interp"><span class="id" title="class">interp</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#D:5"><span class="id" title="variable">D</span></a>) <a id="rho:7" class="idref" href="#rho:7"><span class="id" title="binder">rho</span></a><a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">,</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#listable"><span class="id" title="definition">listable</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#D:5"><span class="id" title="variable">D</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">/\</span></a> <a class="idref" href="Undecidability.Synthetic.Definitions.html#decidable"><span class="id" title="definition">decidable</span></a> (<span class="id" title="keyword">fun</span> <a id="v:8" class="idref" href="#v:8"><span class="id" title="binder">v</span></a> =&gt; <a class="idref" href="Undecidability.FOL.Util.FullTarski.html#i_atom"><span class="id" title="method">i_atom</span></a> (<span class="id" title="var">P</span>:=<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Datatypes.html#tt"><span class="id" title="constructor">tt</span></a>) <a class="idref" href="Undecidability.FOL.FSAT.html#v:8"><span class="id" title="variable">v</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">/\</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#rho:7"><span class="id" title="variable">rho</span></a> <a class="idref" href="Undecidability.FOL.Util.FullTarski.html#d50aa3cc3a68361fcdb685523acf6731"><span class="id" title="notation">⊨</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#phi:4"><span class="id" title="variable">phi</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="FSATd" class="idref" href="#FSATd"><span class="id" title="definition">FSATd</span></a> (<a id="phi:9" class="idref" href="#phi:9"><span class="id" title="binder">phi</span></a> : <a class="idref" href="Undecidability.FOL.Util.Syntax.html#form"><span class="id" title="inductive">form</span></a>) :=<br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">exists</span></a> <a id="D:10" class="idref" href="#D:10"><span class="id" title="binder">D</span></a> (<a id="I:11" class="idref" href="#I:11"><span class="id" title="binder">I</span></a> : <a class="idref" href="Undecidability.FOL.Util.FullTarski.html#interp"><span class="id" title="class">interp</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#D:10"><span class="id" title="variable">D</span></a>) <a id="rho:12" class="idref" href="#rho:12"><span class="id" title="binder">rho</span></a><a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#a883bdd010993579f99d60b3775bcf54"><span class="id" title="notation">,</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#listable"><span class="id" title="definition">listable</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#D:10"><span class="id" title="variable">D</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">/\</span></a> <a class="idref" href="Undecidability.Synthetic.DecidabilityFacts.html#discrete"><span class="id" title="definition">discrete</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#D:10"><span class="id" title="variable">D</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">/\</span></a> <a class="idref" href="Undecidability.Synthetic.Definitions.html#decidable"><span class="id" title="definition">decidable</span></a> (<span class="id" title="keyword">fun</span> <a id="v:13" class="idref" href="#v:13"><span class="id" title="binder">v</span></a> =&gt; <a class="idref" href="Undecidability.FOL.Util.FullTarski.html#i_atom"><span class="id" title="method">i_atom</span></a> (<span class="id" title="var">P</span>:=<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Datatypes.html#tt"><span class="id" title="constructor">tt</span></a>) <a class="idref" href="Undecidability.FOL.FSAT.html#v:13"><span class="id" title="variable">v</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Logic.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">/\</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#rho:12"><span class="id" title="variable">rho</span></a> <a class="idref" href="Undecidability.FOL.Util.FullTarski.html#d50aa3cc3a68361fcdb685523acf6731"><span class="id" title="notation">⊨</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#phi:9"><span class="id" title="variable">phi</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="cform" class="idref" href="#cform"><span class="id" title="definition">cform</span></a> := <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Specif.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">{</span></a> <a id="phi:14" class="idref" href="#phi:14"><span class="id" title="binder">phi</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Specif.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">|</span></a> <a class="idref" href="Undecidability.FOL.Util.Syntax_facts.html#bounded"><span class="id" title="inductive">bounded</span></a> 0 <a class="idref" href="Undecidability.FOL.FSAT.html#phi:14"><span class="id" title="variable">phi</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Specif.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a id="FSATdc" class="idref" href="#FSATdc"><span class="id" title="definition">FSATdc</span></a> (<a id="phi:15" class="idref" href="#phi:15"><span class="id" title="binder">phi</span></a> : <a class="idref" href="Undecidability.FOL.FSAT.html#cform"><span class="id" title="definition">cform</span></a>) :=<br/>
+&nbsp;&nbsp;<a class="idref" href="Undecidability.FOL.FSAT.html#FSATd"><span class="id" title="definition">FSATd</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/V8.13.0/stdlib//Coq.Init.Specif.html#proj1_sig"><span class="id" title="definition">proj1_sig</span></a> <a class="idref" href="Undecidability.FOL.FSAT.html#phi:15"><span class="id" title="variable">phi</span></a>).<br/>
+</div>
+</div>
+<div id="footer">
+  Generated by <a href="http://coq.inria.fr/">coqdoc</a> and improved with <a href="https://github.com/tebbi/coqdocjs">CoqdocJS</a>
+</div>
+</div>
+</body>
+
+</html>
