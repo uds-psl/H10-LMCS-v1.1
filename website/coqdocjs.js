@@ -172,8 +172,8 @@ function postprocess(){
   repairDom();
   replInTextNodes()
   replNodes();
-  foldProofs();
-  document.getElementById("toggle-proofs").addEventListener("click", toggleProofs);
+  // foldProofs();
+  // document.getElementById("toggle-proofs").addEventListener("click", toggleProofs);
   updateView();
 }
 
